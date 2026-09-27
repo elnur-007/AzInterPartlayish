@@ -1,0 +1,259 @@
+/* About */
+#about {
+    display: grid;
+    gap: 100px;
+}
+
+.about_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+
+    align-items: center;
+}
+
+.about_header {
+    margin-bottom: 50px;
+
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.about_description {
+    color: #5A7184;
+    font-size: 20px;
+    line-height: 32px;
+    position: relative;
+}
+
+.about_container .about_description:first-child::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 120%;
+    background-color: #FF9900;
+    display: block;
+
+    width: 3px;
+    height: 120%;
+
+    background-color: #FF9900;
+
+    position: absolute;
+    right: -40px;
+    top: -150px;
+}
+
+.about_container .about_description:last-child::after {
+    content: "";
+
+    display: block;
+
+    width: 55%;
+    height: 3px;
+
+    background-color: #FF9900;
+
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+}
+
+.about_img_list {
+    position: relative;
+}
+
+.about_img_list img {
+    width: 325px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.about_img_list li:last-child img {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+
+.about_img {
+    width: 100%;
+}
+
+/* Achievements */
+#achievements {
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.achievements_subheader {
+    color: #FF9900;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.achievements_header {
+    margin: 30px 0;
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.achievements_description {
+    color: #5A7184;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.achievements_img {
+    width: 100%;
+}
+
+#achievements img:first-child {
+    margin-bottom: 80px;
+}
+
+#achievements img:last-child {
+    margin-top: 80px;
+}
+
+/* CERTIFICATES */
+#certificates {
+    margin-bottom: 150px;
+
+    text-align: center;
+}
+
+#certificates .team_description {
+    text-transform: uppercase;
+}
+
+.certificates_card {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 421px !important;
+}
+
+.certificates_card:last-child {
+    margin-right: 0;
+}
+
+.certificates_card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+
+    .about_img_list li:first-child img {
+        display: none;
+    }
+
+    .about_img_list li:last-child img {
+        width: 100%;
+
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    #about .about_container:last-child {
+        grid-template-columns: 1fr;
+    }
+
+    .about_img {
+        display: none;
+    }
+
+    .about_container .about_description:first-child::after {
+        display: none;
+    }
+
+}
+
+@media (max-width: 900px) {
+    #achievements {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .achievements_header {
+        font-size: 36px;
+    }
+
+    .achievements_subheader {
+        font-size: 22px;
+    }
+
+    .achievements_description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #achievements img:first-child,
+    #achievements img:last-child {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about_header {
+        display: none;
+    }
+
+    .about_img_list {
+        display: none;
+    }
+
+    .about_container {
+        grid-template-columns: 1fr;
+    }
+
+    #about {
+        gap: 30px;
+    }
+
+    .about_container .about_description:last-child::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about_description {
+        font-size: 18px;
+    }
+
+    #achievements {
+        margin-bottom: 100px;
+        gap: 20px;
+    }
+
+    .achievements_header {
+        margin: 20px 0;
+
+        font-size: 28px;
+        line-height: 40px
+    }
+
+    .achievements_subheader {
+        font-size: 16px;
+    }
+    
+    #achievements img:first-child,
+    #achievements img:last-child {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
